@@ -1,12 +1,40 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-  <title>Template Repo</title>
-</head>
-<body>
-  <div class="container">
-    <h1>Welcome!</h1>
-
-  </div>
-</body>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Grow Your Plant</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heroSelect">
+        <h1>Select your Hero Class</h1>
+        <div class="buttonForWarrior">
+          <button class="btn-danger" id="buttonForWarrior">Warrior</button>
+        </div>
+        <div class="buttonForWizard">
+          <button class="btn-default" id="buttonForWizard">Wizard</button>
+        </div>
+        <div class="buttonForThief">
+          <button class="btn-success" id="buttonForThief">Thief</button>
+        </div>
+      </div>
+      <div class="hero">
+        <h1>Your Hero's Stats</h1>
+        <h3><div class="stats"></div></h3>
+      </div>
+      <!-- <form id="new-character">
+        <div class="form-group">
+          <label for="initialState">Your plant's name</label>
+          <input type="text" class="form-control" id="initialState" placeholder="Enter your plan's name">
+        </div>
+        <button type="submit" class="btn-success">Create New Character</button>
+      </form>
+      <div class="grow-buttons">
+        <button class="btn-success" id="plusStrength">Add strength</button>
+      </div>
+      <h1>Your Plant's Values</h1>
+      <h3><div id="results">placeholder</div></h3> -->
+    </div>
+  </body>
 </html>

@@ -1,3 +1,7 @@
 body {
   background-color: lightblue;
 }
+
+.hero {
+  display: none;
+}

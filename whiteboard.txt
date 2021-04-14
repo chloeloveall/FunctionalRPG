@@ -1,0 +1,33 @@
+{soil: 0, water: 0, light:0}
+const warrior = { type: warrior, strength:5, intelligence:1, dexterity:3}
+const wizard = { type: wizard, strength:1, intelligence:5, dexterity:2, hitpoint: 100, experience points: 0}
+
+const changeState = (prop) => {
+  return (value) => {
+    return (state) => ({
+      ...state,
+      [prop] : (state[prop] || 0) + value
+    })
+  }
+}
+
+const storeState = (initialState) => {
+  let currentState = initialState; // We could pass in an initial state to the object instead of starting with an empty object as well.
+  return (stateChangeFunction) => {
+    const newState = stateChangeFunction(currentState);
+    currentState = {...newState};
+    return newState;
+  }
+}
+
+
+const decreaseHP = changeState("hitpoint")(5)
+
+1)main screen with buttons for classes
+2)user clicks class button and it sets the storeState's initialState argument to that class's initialState
+3)there are buttons that button to increase or decrease HP, buttons to increase or decrease experience points
+4) set thresholds for if HP hits 0 character dies or if experience points hit a certain number, character levels up
+5)leveling up will increase player's stats in a certain way
+6) set up monster class similar to player 
+7) introduce maybe turn based system where player can click buttons to do damage to monster until monster hp hits zero, then player experience points increment
+8) add items to increase hitpoints or improve stats
